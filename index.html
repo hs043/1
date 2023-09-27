@@ -13,12 +13,25 @@
         crossorigin="anonymous"></script>
     <style>
         /* 꾸미기 */
+
+            .card-img-top {
+            max-height: 300px; /* 초기에 이미지의 높이를 제한합니다. */
+            object-fit: cover;
+            transition: max-height 0.3s ease; /* 트랜지션 효과를 추가합니다. */
+        }
+
+        /* 호버 상태에서 이미지 높이 제한 해제 */
+        .card:hover .card-img-top {
+            max-height: none; /* 마우스를 올렸을 때 이미지 높이 제한을 해제합니다. */
+        }
+        
         .card {
             transition: transform 0.3s ease;
         }
 
         .card:hover {
             transform: scale(1.05);
+
         
 
     </style>
